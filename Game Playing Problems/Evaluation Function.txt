@@ -1,0 +1,19 @@
+Evaluation Function for RedBlueNim Game
+
+The evaluation function in the RedBlueNim game aims to assess the current state of the game and provide a numerical score indicating the favorability of that state for the computer player. The function takes into account various factors to determine this score.
+
+Weighting of Marbles:
+Red marbles are assigned a weight of 2, and blue marbles are assigned a weight of 3. These weights reflect the relative importance of each type of marble in the game.
+Red marbles are given a lower weight compared to blue marbles to incentivize the computer player to prioritize capturing blue marbles when possible, as they have a higher weight.
+
+Standard Nim vs. Misère Nim:
+In the standard version of Nim, having fewer marbles left on the board is generally advantageous. Therefore, the evaluation function favors states with fewer total marbles remaining.
+In contrast, in Misère Nim, having more marbles left can be advantageous, especially when forcing the opponent into a losing position. Thus, the evaluation function adjusts its scoring criteria based on the game version being played.
+
+Calculation of Score:
+For the standard version of Nim, the score is calculated as the weighted sum of remaining red and blue marbles, with the weights determined by their respective importance.
+For Misère Nim, the score is adjusted to consider the difference between the initial number of marbles and the current number, favoring positions where the computer has managed to preserve more marbles than the opponent.
+
+Impact on Gameplay:
+The evaluation function influences the decision-making process of the computer player by guiding it towards actions that lead to states with higher evaluation scores.
+By prioritizing moves that result in states with more favorable evaluation scores, the computer player aims to gain an advantage over the human player and ultimately win the game.
